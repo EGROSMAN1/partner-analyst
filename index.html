@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>מחפש חבר נשמה לצוות | אנליסט/ית דאטה, פרטנר</title>
+<title>Data Analyst - Business Division, Partner | מחפש חבר נשמה לצוות</title>
 <meta name="description" content="מחפש אנליסט/ית לצוות הדאטה שלי בחטיבה העסקית של פרטנר. המשרה בראש העין, מודל עבודה היברידי. פנייה ישירה בוואטסאפ או בלינקדין.">
 <meta name="theme-color" content="#000000">
 <meta property="og:title" content="מחפש חבר נשמה לצוות הדאטה שלי">
@@ -42,6 +42,33 @@
   a{color:inherit;text-decoration:none}
   a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:3px solid var(--aqua);outline-offset:3px;border-radius:6px}
 
+  /* ---------- desktop top bar ---------- */
+  .topbar{display:none}
+  @media(min-width:760px){
+    .topbar{
+      display:block;position:sticky;top:0;z-index:60;
+      background:rgba(0,0,0,.82);
+      -webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);
+      border-bottom:1px solid rgba(255,255,255,.08);
+    }
+    .topbar .wrap{display:flex;align-items:center;gap:20px;height:74px}
+    .topbar .me{display:flex;align-items:center;gap:11px;min-width:0}
+    .topbar .me::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--aqua);flex:none;box-shadow:0 0 12px rgba(0,239,209,.9)}
+    .topbar .me b{display:block;font-weight:400;font-size:.95rem;color:#fff;line-height:1.3}
+    .topbar .me span{display:block;font-size:.78rem;color:var(--haze);line-height:1.3}
+    .topbar .acts{margin-inline-start:auto;display:flex;align-items:center;gap:10px}
+    .topbar .cue{
+      display:flex;align-items:center;gap:9px;margin-inline-end:4px;
+      font-size:.92rem;color:#fff;white-space:nowrap;
+    }
+    .topbar .cue b{font-weight:400}
+    .topbar .cue svg{width:22px;height:22px;color:var(--aqua);flex:none;animation:nudge 1.8s ease-in-out infinite}
+    @keyframes nudge{0%,100%{transform:translateX(0)}50%{transform:translateX(-6px)}}
+    .topbar .btn{min-height:46px;padding:12px 22px;font-size:.95rem;border-radius:11px}
+    .topbar .btn-solid{box-shadow:0 0 0 1px rgba(0,239,209,.35),0 14px 34px -16px rgba(0,239,209,.9)}
+    .topbar .btn-line{border-width:1px;border-color:rgba(0,239,209,.55)}
+  }
+
   /* ---------- hero ---------- */
   .hero{position:relative;overflow:hidden;padding:clamp(30px,6vw,56px) 0 clamp(48px,9vw,96px)}
   .hero .bg{
@@ -61,7 +88,7 @@
   /* kicker */
   .kicker{
     display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px;
-    font-size:.68rem;letter-spacing:.14em;line-height:1.6;color:var(--haze);
+    font-size:.75rem;letter-spacing:.1em;line-height:1.6;color:var(--haze);
   }
   .kicker .dot{width:6px;height:6px;border-radius:50%;background:var(--aqua);flex:none;animation:pd 2.4s ease-out infinite}
   .kicker .slash{color:rgba(255,255,255,.22)}
@@ -70,6 +97,20 @@
     .kicker .slash{display:none}
     .kicker .open{flex-basis:100%}
   }
+
+  /* role title */
+  .role{
+    margin-top:clamp(18px,3vw,26px);display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 14px;
+  }
+  .role .want{
+    font-weight:500;font-size:clamp(1.05rem,4.4vw,1.6rem);
+    line-height:1.25;color:#fff;
+  }
+  .role .en{
+    direction:ltr;font-family:var(--mono);font-weight:700;
+    font-size:clamp(1.05rem,4.4vw,1.6rem);letter-spacing:-.01em;color:var(--aqua);line-height:1.25;
+  }
+  .role .meta{font-size:clamp(.85rem,3.2vw,.95rem);color:var(--haze);line-height:1.5}
 
   /* intro: photo + soul-mate line */
   .intro{margin-top:clamp(26px,5vw,42px);display:flex;align-items:center;gap:clamp(14px,3vw,24px)}
@@ -119,8 +160,8 @@
   .player .label{margin-top:20px}
   .player .label b{display:block;font-weight:400;font-size:clamp(1rem,3.4vw,1.08rem);color:#fff}
   .player .label span{
-    display:block;margin-top:6px;font-family:var(--mono);font-size:.66rem;
-    letter-spacing:.14em;color:var(--aqua);text-transform:uppercase;
+    display:block;margin-top:6px;font-family:var(--mono);font-size:.73rem;
+    letter-spacing:.1em;color:var(--aqua);text-transform:uppercase;
   }
   .bar-wrap{margin:18px auto 0;display:flex;align-items:center;gap:12px;max-width:420px}
   .prog{
@@ -129,7 +170,7 @@
   }
   .prog::before{content:"";position:absolute;inset:-14px 0;display:block}
   .prog .fill{position:absolute;inset-block:0;inset-inline-start:0;width:0;border-radius:99px;background:var(--aqua)}
-  .time{font-family:var(--mono);font-size:.7rem;color:var(--haze);direction:ltr;flex:none;min-width:3.2em;text-align:left}
+  .time{font-family:var(--mono);font-size:.75rem;color:var(--haze);direction:ltr;flex:none;min-width:3.2em;text-align:left}
 
   /* ---------- cta ---------- */
   .rule{height:1px;margin-top:clamp(32px,6vw,52px);
@@ -170,14 +211,14 @@
   /* ---------- filter strip ---------- */
   .strip{border-top:1px solid rgba(255,255,255,.1);border-bottom:1px solid rgba(255,255,255,.1);padding:clamp(46px,8vw,84px) 0}
   .strip .head{max-width:52ch}
-  .eyebrow{font-family:var(--mono);font-size:.66rem;letter-spacing:.16em;color:var(--aqua);text-transform:uppercase}
+  .eyebrow{font-family:var(--mono);font-size:.73rem;letter-spacing:.12em;color:var(--aqua);text-transform:uppercase}
   .strip h2{margin-top:14px;font-size:clamp(1.32rem,5vw,2rem);font-weight:200;line-height:1.4;letter-spacing:-.005em}
   .strip h2 b{font-weight:500;color:var(--aqua)}
   .strip .head p{margin-top:16px;color:var(--haze);font-size:clamp(.96rem,3.6vw,1.05rem)}
   .cols{margin-top:clamp(32px,5vw,48px);display:grid;gap:0}
   @media(min-width:760px){.cols{grid-template-columns:repeat(2,1fr);column-gap:44px}}
   .col{padding:26px 0;border-top:1px solid rgba(255,255,255,.1)}
-  .col .tag{font-family:var(--mono);font-size:.66rem;letter-spacing:.12em;color:var(--aqua)}
+  .col .tag{font-family:var(--mono);font-size:.73rem;letter-spacing:.1em;color:var(--aqua)}
   .col h3{margin-top:10px;font-size:clamp(1.02rem,3.8vw,1.12rem);font-weight:400;line-height:1.45;color:#fff}
   .col p{margin-top:9px;font-size:.92rem;color:var(--haze);line-height:1.72}
   .col p + p{margin-top:8px}
@@ -231,15 +272,35 @@
 </head>
 <body class="no-js">
 
+<nav class="topbar" aria-label="פנייה ישירה">
+  <div class="wrap">
+    <div class="me">
+      <div><b>אלירן גרוסמן</b><span>ראש צוות דאטה ואנליטיקס · פרטנר</span></div>
+    </div>
+    <div class="acts">
+      <span class="cue">
+        <b>להגשת מועמדות</b>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12H4M10 6l-6 6 6 6"/></svg>
+      </span>
+      <a class="btn btn-solid" href="https://wa.me/972507514807?text=%D7%94%D7%99%D7%99%20%D7%90%D7%9C%D7%99%D7%A8%D7%9F%2C%20%D7%A8%D7%90%D7%99%D7%AA%D7%99%20%D7%90%D7%AA%20%D7%94%D7%A2%D7%9E%D7%95%D7%93%20-%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%95%D7%93%20%D7%A2%D7%9C%20%D7%94%D7%AA%D7%A4%D7%A7%D7%99%D7%93" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.76-1.66-2.06-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.01-1.04 2.47s1.06 2.87 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.69.25-1.28.17-1.41-.07-.13-.27-.2-.57-.35M12.05 21.8h-.02a9.8 9.8 0 0 1-4.99-1.37l-.36-.21-3.71.97.99-3.62-.23-.37a9.78 9.78 0 0 1-1.5-5.22c0-5.4 4.4-9.8 9.82-9.8a9.75 9.75 0 0 1 6.94 2.88 9.74 9.74 0 0 1 2.87 6.93c0 5.41-4.4 9.81-9.81 9.81M20.52 3.45A11.7 11.7 0 0 0 12.05 0C5.6 0 .35 5.25.34 11.7c0 2.06.54 4.08 1.57 5.86L.24 24l6.59-1.73a11.7 11.7 0 0 0 5.21 1.25h.01c6.45 0 11.7-5.25 11.7-11.7 0-3.13-1.21-6.07-3.43-8.28"/></svg>וואטסאפ</a>
+      <a class="btn btn-line" href="https://www.linkedin.com/in/eliran-grossman-17a84b245?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13Zm1.78 13.02H3.55V9h3.57v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></svg>לינקדין</a>
+    </div>
+  </div>
+</nav>
+
 <header class="hero">
   <div class="bg"></div><div class="halo"></div>
   <div class="wrap">
 
     <div class="kicker">
       <i class="dot"></i>
-      <span>פרטנר תקשורת · החטיבה העסקית</span>
-      <span class="slash" aria-hidden="true">/</span>
       <span class="open">משרה אחת. פתוחה.</span>
+    </div>
+
+    <div class="role">
+      <span class="want">דרוש</span>
+      <span class="en">Data Analyst</span>
+      <span class="meta">בחטיבה העסקית בפרטנר</span>
     </div>
 
     <div class="intro">
@@ -249,7 +310,7 @@
 
     <h1>
       <span class="turn">אני לא מחפש מועמד רגיל.</span>
-      <span class="final">אני מחפש את <span class="hl">הכישרון הבא</span> — מישהו שיודע לחשוב מחוץ לקופסה, לאתגר את הקיים, ולפרק בעיות מורכבות. בדיוק כמוני.</span>
+      <span class="final">אני מחפש את <span class="hl">הכישרון הבא</span> שיצטרף לנבחרת שלי בפרטנר, בחטיבה העסקית — מישהו שיודע לחשוב מחוץ לקופסה, לאתגר את הקיים, ולפרק בעיות מורכבות. בדיוק כמוני.</span>
     </h1>
 
     <div class="player">
